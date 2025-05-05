@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Les Monuments</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <h1>Les Monuments</h1>
+  </header>
+
+  <main>
+    <p class="instructions">
+      Cliquez sur un monument ou son bouton pour obtenir une description
+    </p>
+
+    
+    <nav aria-label="Choix des monuments">
+      <ul class="buttons">
+        <li><button data-key="eiffel">Tour Eiffel</button></li>
+        <li><button data-key="notre-dame">Notre-Dame</button></li>
+        <li><button data-key="arc">Arc de Triomphe</button></li>
+        <li><button data-key="mont-saint-michel">Mont Saint-Michel</button></li>
+        <li><button data-key="versailles">Versailles</button></li>
+      </ul>
+    </nav>
+
+    
+    <section class="thumbnails" aria-label="Vignettes des monuments">
+      <figure data-key="eiffel">
+        <img src="img/tourEiffel.jpg" alt="Photo de la Tour Eiffel">
+        <figcaption>Tour Eiffel</figcaption>
+      </figure>
+      <figure data-key="notre-dame">
+        <img src="img/notreDame.jpg" alt="Photo de Notre-Dame de Paris">
+        <figcaption>Notre-Dame</figcaption>
+      </figure>
+      <figure data-key="arc">
+        <img src="img/arcDeTriomphe.jpg" alt="Photo de l'Arc de Triomphe">
+        <figcaption>Arc de Triomphe</figcaption>
+      </figure>
+      <figure data-key="mont-saint-michel">
+        <img src="img/MontSaintMichel.jpg" alt="Photo du Mont Saint-Michel">
+        <figcaption>Mont Saint-Michel</figcaption>
+      </figure>
+      <figure data-key="versailles">
+        <img src="img/versailles.jpg" alt="Photo du Château de Versailles">
+        <figcaption>Versailles</figcaption>
+      </figure>
+    </section>
+
+   
+    <section id="info" class="hidden" aria-live="polite">
+      <article>
+        <header>
+          <h2 id="info-title"></h2>
+          <p class="subheader">
+            <span id="info-city"></span>, <strong>France</strong>
+          </p>
+        </header>
+        <p id="info-desc"></p>
+
+        <figure id="map-container">
+          <div id="map"></div>
+          <figcaption>Carte de France avec localisation du monument</figcaption>
+        </figure>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Agence Web Monuments par Nassima Mehdi</p>
+  </footer>
+
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
