@@ -65,7 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (marker) map.removeLayer(marker);
     marker = L.marker(data.coords).addTo(map);
     map.setView(data.coords, 12);
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 200); // petit délai pour que le DOM soit bien prêt
   }
+  // ← AJOUT ICI
 
   // 5. Gestionnaires d’événements
 
