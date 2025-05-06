@@ -121,6 +121,7 @@
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
+    border: 1px solid black; /* Bordure fine et discrète */
   }
   
   .thumbnails img:hover {
@@ -132,11 +133,15 @@
   #info {
     background: var(--black);
     color: var(--white);
-    padding: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
   
-    /* Masquée / animée */
+    /* Alignement sans décalage */
+    padding: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  
+    /* Animation */
     opacity: 0;
     transform: translateX(-20px);
     transition: var(--transition);
@@ -157,7 +162,24 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
-  
+  #info,
+  #info h2,
+  #info .subheader,
+  #info-desc {
+    text-align: left;
+    margin-left: 0;      
+    padding-left: 0;      
+  }
+  #info article {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .info-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
   /* Carte */
   #map {
     width: 100%;
